@@ -1,6 +1,6 @@
 {
   "name": "postxml-image-size",
-  "version": "0.2.0",
+  "version": "0.1.1",
   "description": "Postxml plugin adds sizes to images",
   "main": "index.js",
   "dependencies": {
