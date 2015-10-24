@@ -10,8 +10,13 @@
 [Postxml]
 
 ## Options
+### cwd
+**Directory of parsing file. It is needed for images' urls.** <br>
+Type: `String`<br>
+Default: `''`
+
 ### round
-**Enable rounding sizes**
+**Enable rounding sizes** <br>
 Type: `String`<br>
 Default: `true`
 

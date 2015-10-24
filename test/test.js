@@ -13,7 +13,10 @@ describe('postxml-image-size', function () {
     it('local image', function () {
         test(
             '<img src="schoolgirl.png">',
-            '<img src="schoolgirl.png" width="255" height="180">'
+            '<img src="schoolgirl.png" width="255" height="180">',
+            {
+                cwd: 'test'
+            }
         )
     });
     it('remote image with size in url', function () {

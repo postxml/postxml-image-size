@@ -7,6 +7,7 @@ module.exports = function (options) {
     
     var round;
     options = options || {};
+    options.cwd = options.cwd || '';
     options.round = options.round || true;
     if (options.round) {
          round = function (numb) {
@@ -21,7 +22,7 @@ module.exports = function (options) {
     return function ($) {
         // local image
         $('img[src]:not([src*="//"]):not(width):not(height)').each(function () {
-            var image = 'test//' + $(this).attr('src');
+            var image = options.cwd + '/' + $(this).attr('src');
             var size = sizeOf(image);
             $(this).attr({
                 width: round(size.width),
