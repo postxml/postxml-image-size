@@ -29,14 +29,5 @@ module.exports = function (options) {
                 height: round(size.height)
             });
         });
-        // image with size in url
-        $('img[src*="x"][src*="//"]:not(width):not(height)').each(function () {
-            var image = $(this).attr('src');
-            var size = {
-                width: round( image.match(/[\D]\d+[x]/g)[0].slice(1, -1) ),
-                height: round( image.match(/[x]\d+[\D]/g)[0].slice(1, -1) )
-            };
-            $(this).attr(size);
-        });
     };
 };

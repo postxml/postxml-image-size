@@ -1,7 +1,7 @@
 # postxml-image-size
 [![npm version][npm-image]][npm-url]
 
-> [PostXML] plugin adds sizes to images.
+> [PostXML] plugin adds sizes to local images.
 
 ## Installation
 `npm i postxml-image-size --save-dev`
@@ -11,12 +11,12 @@
 
 ## Options
 ### cwd
-**Directory of parsing file. It is needed for images' urls.** <br>
+**Directory of parsing file. It is needed for images' urls.**<br>
 Type: `String`<br>
 Default: `''`
 
 ### round
-**Enable rounding sizes** <br>
+**Enable rounding sizes**<br>
 Type: `String`<br>
 Default: `true`
 

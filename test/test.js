@@ -19,10 +19,4 @@ describe('postxml-image-size', function () {
             }
         )
     });
-    it('remote image with size in url', function () {
-        test(
-            '<img src="http://placehold.it/350x150/848443">',
-            '<img src="http://placehold.it/350x150/848443" width="350" height="150">'
-        );
-    });
 });
