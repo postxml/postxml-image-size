@@ -19,4 +19,13 @@ describe('postxml-image-size', function () {
             }
         )
     });
+    it('image doesnt exist', function () {
+        test(
+            '<img src="a.png">',
+            '<img src="a.png">',
+            {
+                cwd: 'test'
+            }
+        )
+    });
 });

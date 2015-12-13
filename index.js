@@ -1,7 +1,7 @@
 var request = require('urllib-sync').request;
 var sizeOf = require('image-size');
 var url = require('url');
-var http = require('http');
+var fs = require('fs');
 
 module.exports = function (options) {
     
@@ -23,11 +23,13 @@ module.exports = function (options) {
         // local image
         $('img[src]:not([src*="//"]):not(width):not(height)').each(function () {
             var image = options.cwd + '/' + $(this).attr('src');
-            var size = sizeOf(image);
-            $(this).attr({
-                width: round(size.width),
-                height: round(size.height)
-            });
+            if (fs.existsSync(image)) {
+                var size = sizeOf(image);
+                $(this).attr({
+                    width: round(size.width),
+                    height: round(size.height)
+                });
+            }
         });
     };
 };
